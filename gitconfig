@@ -1,0 +1,13 @@
+[user]
+    name = Marco Botros
+    email = btsmarco@gmail.com
+[color]
+    ui = true
+[format]
+    pretty = oneline
+[core]
+    editor = vim
+[review "review.cyanogenmod.org"]
+    username = btsmarco
+[push]
+    default = matching
