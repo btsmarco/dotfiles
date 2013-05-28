@@ -15,7 +15,7 @@
 #   ./update.sh repos powerline
 #
 
-
+cd
 vimdir=$PWD/.vim
 bundledir=$vimdir/bundle
 tmp=/tmp/$LOGNAME-vim-update
