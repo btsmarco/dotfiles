@@ -8,7 +8,7 @@ this_path=$PWD
 
 echo "What prog are you using? (yum, apt-get)"
 read program
-
+cd
 echo "Ready to start..........."
 #installing necessary software
 sudo $program install vim

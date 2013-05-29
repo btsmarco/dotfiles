@@ -230,24 +230,27 @@ function! ColorTermZenburn()
   let g:zenburn_high_Contrast = 1
 endfunction
 
+nmap <C-c> :colorscheme railscasts <Enter>
+nmap <C-x> :colorscheme delek <Enter>
+colorscheme railscasts
+set t_Co=256
+set t_Sf=[3%p1%dm
+set t_Sb=[4%p1%dm
+"set background=light
+
 " Make sure colored syntax mode is on, and make it Just Work with newer 256
 " color terminals like iTerm2.
-if !has('gui_running')
-"  if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
-    set t_Co=256
-    call ColorTermZenburn()
+"if !has('gui_running')
+"  if $TERM == "term-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
+"    set t_Co=256
+ "   call ColorTermTorte()
 "  elseif has("terminfo")
-"    colorscheme default
-"    set t_Co=8
+"    colorscheme torte
+"    set t_Co=256
 "    set t_Sf=[3%p1%dm
 "    set t_Sb=[4%p1%dm
-"  else
-"    colorscheme default
-"    set t_Co=8
-"    set t_Sf=[3%dm
-"    set t_Sb=[4%dm
 "  endif
-endif
+"endif
 syntax on
 
 " window splits & ruler were too bright - change to white on grey
@@ -331,6 +334,6 @@ set foldmethod=syntax
 set foldmethod=indent
 au BufRead,BufNewFile *.t set filetype=cpp
 
-"noremap ' :w<Enter>
+noremap ' :w<Enter>
 noremap ; :w<Enter>
 noremap wq :wq<Enter>
