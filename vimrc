@@ -337,3 +337,4 @@ au BufRead,BufNewFile *.t set filetype=cpp
 noremap ' :w<Enter>
 noremap ; :w<Enter>
 noremap wq :wq<Enter>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
